@@ -75,8 +75,8 @@ const CarDetails = ({car}:{car:CarProps}) => {
             <div className="flex flex-col gap-3 w-full">
                 <div className="flex flex-row justify-between items-center">
                     <div className="flex flex-col">
-                        <small className="text-slate-400 text-[0.7rem]" >{car.name}</small>
-                        <span>{car.brand} {car.model}</span>
+                        <small className="text-slate-400 text-[0.7rem]" >{car?.name}</small>
+                        <span>{car?.brand} {car?.model}</span>
                     </div>
                 </div>
 
@@ -94,7 +94,7 @@ const CarDetails = ({car}:{car:CarProps}) => {
                 <div className="flex flex-row items-center justify-between border-b py-1">
                     <small>Colour</small>
                     <div className="flex flex-row items-center gap-2">
-                        <div style={{backgroundColor:car.colour.toLowerCase()}}  className="p-2 rounded-full"/>
+                        <div style={{backgroundColor:car?.colour.toLowerCase()}}  className="p-2 rounded-full"/>
                         <small className="font-bold" >{car?.colour}</small>
                     </div>
                 </div>
