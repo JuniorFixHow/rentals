@@ -23,7 +23,7 @@ const CarPayment = ({car}:{car:CarProps}) => {
             setTotalAmount(time*car?.pricePerDay)
             setTotalTime(time);
         }
-    },[start, end, car?.pricePerHour, car?.pricePerDay])
+    },[start, end, car])
 
   return (
     <>

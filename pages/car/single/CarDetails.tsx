@@ -21,7 +21,7 @@ const CarDetails = ({car}:{car:CarProps}) => {
                 <span className="" >Back</span>
             </Link>
             {
-                car.pricePerHour ?
+                car?.pricePerHour ?
                 <span>${car?.pricePerHour}/<small className="text-[0.7rem]" >hour</small> </span>
                 :
                 <span>${car?.pricePerDay}/<small className="text-[0.7rem]" >day</small> </span>
