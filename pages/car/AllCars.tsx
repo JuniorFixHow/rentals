@@ -2,6 +2,7 @@ import { CarsData } from '@/data/Dummy'
 import { SmallButton, SmallButtonText, Subtitle } from '@/features/Texts'
 import { formatDateTime } from '@/functions/Dates';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Dispatch, SetStateAction } from 'react';
 import { IoIosHeartEmpty, IoMdHeart } from "react-icons/io";
 import { IoFilterOutline } from "react-icons/io5";
@@ -13,7 +14,7 @@ export type ToggleProps = {
 
 const AllCars = ({setToggleNav}:ToggleProps) => {
   return (
-    <div className='flex flex-col gap-4 w-full sm:grow px-4' >
+    <div className='flex flex-col pb-36 md:pb-0 gap-4 w-full sm:grow px-4' >
       <div className="flex flex-row items-center justify-between w-full">
         <div className="flex flex-row items-center gap-4">
           <Subtitle className='hidden sm:block' text='Featured Collections' />
@@ -51,7 +52,7 @@ const AllCars = ({setToggleNav}:ToggleProps) => {
                 }
               </div>
 
-              <div className="flex flex-col w-full">
+              <Link href={`/cars/${car.id}`}  className="flex cursor-pointer flex-col w-full">
                 <div className="flex flex-row justify-end w-full h-[5rem]">
                   <Image src={car?.photos[0]} alt='car_image' height={100} width={150} />
                 </div>
@@ -69,7 +70,7 @@ const AllCars = ({setToggleNav}:ToggleProps) => {
                   </div>
                 </div>
 
-              </div>
+              </Link>
 
             </div>
           ))

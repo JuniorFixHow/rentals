@@ -22,4 +22,30 @@ export function formatDateTime(date: Date): string {
     const formattedHour = (parseInt(hour) % 12) || 12;
   
     return `${day}/${month}/${year} ${formattedHour}:${minute}`;
-  }
+}
+
+export const today = (date:Date)=>{
+    // const today = new Date();
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+        const day = String(date.getDate()).padStart(2, '0');
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+
+        const minDateTime = `${year}-${month}-${day}T${hours}:${minutes}`;
+        return minDateTime
+}
+
+
+export function getTimeDifferenceInHours(date1: Date, date2: Date): number {
+    const differenceInMilliseconds = Math.abs(date2.getTime() - date1.getTime());
+    const differenceInHours = differenceInMilliseconds / (1000 * 60 * 60); // Convert milliseconds to hours
+    return differenceInHours;
+}
+
+
+export function getTimeDifferenceInDays(date1: Date, date2: Date): number {
+    const differenceInMilliseconds = Math.abs(date2.getTime() - date1.getTime());
+    const differenceInDays = differenceInMilliseconds / (1000 * 60 * 60 * 24); // Convert milliseconds to days
+    return Math.ceil(differenceInDays); // Ceil the result
+}

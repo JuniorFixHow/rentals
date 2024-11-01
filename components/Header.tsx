@@ -10,7 +10,7 @@ const Header = () => {
         <h1>LOGO</h1>
         <div className="flex flex-row items-center p-[0.2rem] bg-black dark:bg-white rounded-full gap-1">
             <button onClick={toggleTheme}  className='bg-white text-black text-[0.7rem] rounded-full px-2 py-1' >Light Mode</button>
-            <button onClick={toggleTheme}  className='bg-black text-white text-[0.7rem] rounded-full px-2 py-1' >Dark Mode</button>
+            <button onClick={toggleTheme}  className='bg-black border-0 text-white text-[0.7rem] rounded-full px-2 py-1' >Dark Mode</button>
         </div>
         <Image alt="user" className="rounded-full" height={30} width={30} src='/user.png' />
     </header>
