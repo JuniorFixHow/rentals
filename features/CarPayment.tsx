@@ -35,12 +35,12 @@ const CarPayment = ({car}:{car:CarProps}) => {
                 <div className="flex flex-row gap-2 items-start">
                     <div className="flex flex-col gap-2 w-full">
                         <span className='text-[0.8rem] text-slate-500' >Pick-up date and time</span>
-                        <input className='bg-[#232B3F] rounded-lg p-1 text-white text-[0.8rem]' min={today(new Date())} onChange={(e)=>setStart(new Date(e.target.value))} type="datetime-local" />
+                        <input className='bg-[#232B3F] rounded-lg px-1 py-3 text-white text-[0.8rem]' min={today(new Date())} onChange={(e)=>setStart(new Date(e.target.value))} type="datetime-local" />
                     </div>
 
                     <div className="flex flex-col gap-2 w-full">
                         <span className='text-[0.8rem] text-slate-500' >Drop-off date and time</span>
-                        <input className='bg-[#232B3F] rounded-lg p-1 text-white text-[0.8rem]' min={today(start)} onChange={(e)=>setEnd(new Date(e.target.value))} type="datetime-local" />
+                        <input className='bg-[#232B3F] rounded-lg px-1 py-3 text-white text-[0.8rem]' min={today(start)} onChange={(e)=>setEnd(new Date(e.target.value))} type="datetime-local" />
                     </div>
                 </div>
 

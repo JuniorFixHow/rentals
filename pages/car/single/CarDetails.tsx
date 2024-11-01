@@ -30,7 +30,7 @@ const CarDetails = ({car}:{car:CarProps}) => {
 
         <div className="flex gap-6 dark:border items-center flex-col p-4 shadow-md rounded-3xl">
             <div className="flex flex-col gap-2">
-                <div style={{backgroundImage:`url(${currentPhoto})`, backgroundPosition:'center', backgroundSize:'cover', backgroundRepeat:'no-repeat'}}  className="flex h-[11rem] w-[22rem] flex-col gap-5 rounded-xl p-4">
+                <div style={{backgroundImage:`url(${currentPhoto})`, backgroundPosition:'center', backgroundSize:'cover', backgroundRepeat:'no-repeat'}}  className="flex h-[11rem] w-[18rem] md:w-[22rem] flex-col gap-5 rounded-xl p-4">
                     <div className="flex z-10 w-full flex-row justify-between items-center">
                         <div className="flex flex-row gap-2">
                         {

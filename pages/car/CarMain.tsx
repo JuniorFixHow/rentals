@@ -6,7 +6,7 @@ import AllCars from './AllCars'
 const CarMain = () => {
   const [toggleNav, setToggleNav] = useState(false);
   return (
-    <div className='flex  flex-row gap-4 items-start relative' >
+    <div className='flex  flex-row gap-4 pb-10 md:pb-0 items-start relative' >
         <FilterCars toggleNav={toggleNav} />
         <AllCars toggleNav={toggleNav} setToggleNav={setToggleNav} />
     </div>
