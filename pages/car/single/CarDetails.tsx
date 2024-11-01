@@ -34,11 +34,11 @@ const CarDetails = ({car}:{car:CarProps}) => {
                     <div className="flex z-10 w-full flex-row justify-between items-center">
                         <div className="flex flex-row gap-2">
                         {
-                            car.new &&
+                            car?.new &&
                             <SmallButton text='New' className='bg-gradient-to-br from-[#F7C579] to-[#F4743B] dark:from-transparent dark:to-transparent  cursor-default text-white text-[0.7rem] px-2 py-1' />
                         }
                         {
-                            car.rented ?
+                            car?.rented ?
                             <div className="flex items-center justify-center p-1 bg-[#9498A5] rounded-md dark:bg-transparent border">
                                 <span className='text-[0.6rem] text-white' >Booked till {formatDateTime(car.rentedTo!)}</span>
                             </div>
@@ -48,7 +48,7 @@ const CarDetails = ({car}:{car:CarProps}) => {
                         </div>
 
                         {
-                         car.favourites.includes('1')?
+                         car?.favourites.includes('1')?
                             <div className="flex items-center justify-center bg-white p-1 rounded-full">
                                 <IoMdHeart className='cursor-pointer' color='#3A80F4' />
                             </div>
@@ -63,7 +63,7 @@ const CarDetails = ({car}:{car:CarProps}) => {
                 
                 <div className="grid grid-cols-3 md:grid-cols-4 gap-3">
                     {
-                        car.photos?.map((photo)=>(
+                        car?.photos?.map((photo)=>(
                         <div onClick={()=>setCurrentPhoto(photo)} key={photo}  className={`flex relative w-20 h-20 cursor-pointer rounded-lg border ${currentPhoto === photo ? 'border-[#3A80F4]':'bg-slate-100'} shadow`}>
                             <Image className="rounded-lg" src={photo} alt="image" fill />
                         </div>
