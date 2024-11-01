@@ -31,7 +31,7 @@ const CarPayment = ({car}:{car:CarProps}) => {
             car?.rented ? 
             <NotAvailable car={car} />
             :
-            <div className='flex flex-col text-white gap-6 p-4 mt-6 md:mt-0 rounded-2xl  grow m-4 bg-[#080D1B]' >
+            <div className='flex flex-col text-white gap-6 p-4 mt-6 md:mt-0 rounded-2xl dark:border  grow md:m-4 bg-[#080D1B]' >
                 <div className="flex flex-col md:flex-row gap-3 items-start justify-between">
                     <div className="flex flex-col w-full md:w-[45%] gap-2">
                         <span className='text-[0.8rem] text-slate-500' >Pick-up date and time</span>
