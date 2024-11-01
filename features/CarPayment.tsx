@@ -28,7 +28,7 @@ const CarPayment = ({car}:{car:CarProps}) => {
   return (
     <>
         {
-            car.rented ? 
+            car?.rented ? 
             <NotAvailable car={car} />
             :
             <div className='flex flex-col text-white gap-6 p-4 rounded-2xl w-fit md:w-full bg-[#080D1B]' >
