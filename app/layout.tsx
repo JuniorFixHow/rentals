@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
+import ButtonNav from "@/components/ButtonNav";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,10 +36,11 @@ export default function RootLayout({
         <ThemeProvider>
         <div className="flex flex-col dark:text-white bg-white dark:bg-[#0D0F11] font-inter">
           <Header/>
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-row gap-4 mt-4">
             <Navbar/>
             {children}
           </div>
+          <ButtonNav/>
           <Footer/>
         </div>
         </ThemeProvider>

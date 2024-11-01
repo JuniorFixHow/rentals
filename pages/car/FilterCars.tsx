@@ -59,7 +59,7 @@ const FilterCars = ({toggleNav}:{toggleNav:boolean}) => {
 
   return (
     <>
-        <div className={`bg-[#F5F5F5] dark:bg-slate-700 absolute mt-10 ${toggleNav?'flex':'hidden'} xl:mt-0 xl:sticky xl:flex flex-col gap-4 py-5 px-4 rounded-2xl`} >
+        <div className={`bg-[#F5F5F5] z-10 ml-4 md:ml-0 dark:bg-slate-700 absolute mt-10 ${toggleNav?'flex':'hidden'} xl:mt-0 xl:sticky xl:flex flex-col gap-4 py-5 px-4 rounded-2xl`} >
             <div className="flex flex-row justify-between items-center">
                 <Subtitle className='dark:text-white' text='Filters' />
                 <SmallButtonText text='Reset' />
