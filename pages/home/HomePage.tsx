@@ -4,7 +4,7 @@ import Services from './Services'
 
 const HomePage = () => {
   return (
-    <div className='flex flex-col gap-5 w-full px-4 pb-[8rem] md:pb-0' >
+    <div className='flex flex-col gap-5 w-full px-4 pb-[6rem]' >
       <Landing/>
       <Services/>
     </div>
