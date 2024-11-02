@@ -8,7 +8,7 @@ export type ServiceItemProps = {
 
 const ServiceItem = ({icon, title, text, className, ...props}:ServiceItemProps) => {
   return (
-    <div {...props}  className={`cursor-default flex p-4 flex-col shadow-lg gap-6 rounded-lg bg-[#182230] w-[20rem] md:w-[15rem] lg:w-[18rem] ${className}`} >
+    <div {...props}  className={`cursor-default flex p-4 flex-col shadow-lg gap-6 rounded-lg bg-[#182230] w-[18rem] md:w-[15rem] lg:w-[18rem] ${className}`} >
         <div className="flex w-fit items-center justify-center p-1 rounded-full bg-[#333F53]">
             <div className="flex items-center justify-center p-2 rounded-full bg-[#475467]">
                 {icon}

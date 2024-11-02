@@ -1,4 +1,3 @@
-import Continue from '@/features/Continue'
 import React from 'react'
 
 const Landing = () => {
@@ -12,7 +11,7 @@ const Landing = () => {
                 <span className='font-seaweed text-[2rem] text-white' >Discover</span>
 
             </div>
-            <Continue className='self-end' link='#services' />
+            {/* <Continue className='self-end' link='#services' /> */}
         </div>
     </div>
   )
