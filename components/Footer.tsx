@@ -23,7 +23,7 @@ const Footer = () => {
           <small className='text-slate-400 text-[0.7rem] w-[16rem]' >Diamond Fleet Rentals is an innovative solution to meet your car needs without any hassle. Easily rent a high-quality car through a simple and user-friendly app.</small>
         </div>
 
-        <div className="flex flex-col gap-4 md:grow items-center md:flex-row md:items-start md:justify-around">
+        <div className="flex  grow gap-10 flex-row items-start justify-around">
 
           <div className="flex flex-col gap-3">
             <small className='text-slate-400 text-[0.7rem]' >Product</small>
