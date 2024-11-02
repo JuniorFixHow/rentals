@@ -6,6 +6,7 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./features/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./misc/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode:'class',
   theme: {
@@ -15,7 +16,8 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       fontFamily:{
-        inter:["Inter", "sans-serif"]
+        inter:["Inter", "sans-serif"],
+        seaweed:["Seaweed Script", "cursive"],
       }
     },
   },

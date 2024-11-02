@@ -1,4 +1,4 @@
-import { CarProps, CarTypeProps, ColoursProps } from "@/types/Types";
+import { CarProps, CarTypeProps, ColoursProps, ServiceProp } from "@/types/Types";
 
 export const CarTypes:CarTypeProps[] = [
     'Sedan', 'Van', 'Pickup', 'Wagon', 'Minivan', 'Couple'
@@ -638,3 +638,34 @@ export const CarsData:CarProps[] = [
         year:'2022'
     }
 ];
+
+export const ServiceData:ServiceProp[]=[
+    {
+        id:1,
+        title:'Discover Your Perfect Car',
+        text:'Explore our car collection and choose a vehicle that suits your trip needs; choose a car that will be your perfect trip',
+        image:'/One.png',
+        imageDark:'/OneDark.png'
+    },
+    {
+        id:2,
+        title:'Secure Your Rental Booking',
+        text:'Go ahead to choose the pick-up and drop-off dates. The relatives prices will be shown to you.',
+        image:'/Two.png',
+        imageDark:'/TwoDark.png'
+    },
+    {
+        id:3,
+        title:'Complete Your Booking Payment',
+        text:'You can decide to pay online with credit card, debit card, Momo or come to the office to complete your transaction.',
+        image:'/Pay.png',
+        imageDark:'/PayDark.png'
+    },
+    {
+        id:4,
+        title:'Your Booking is Confirmed',
+        text:'✔ Congratulations! The booking process is complete. Visit the office to pick-up the car' ,
+        image:'/Four.png',
+        imageDark:'/Four.png'
+    }
+]

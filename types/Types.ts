@@ -35,3 +35,11 @@ export interface CarProps {
     createdAt:Date;
     //ADD FAVOURITES LATER
 }
+
+export type ServiceProp ={
+    id:number,
+    title:string,
+    text:string,
+    image:string,
+    imageDark:string
+}
