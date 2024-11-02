@@ -2,7 +2,8 @@ import FavouritesMain from "@/pages/favourites/FavouritesMain"
 
 const page = () => {
   return (
-    <FavouritesMain/>
+    <div className='w-full md:w-fit' ><FavouritesMain/></div>
+    
   )
 }
 
