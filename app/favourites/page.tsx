@@ -1,7 +1,8 @@
+import FavouritesMain from "@/pages/favourites/FavouritesMain"
 
 const page = () => {
   return (
-    <div>page</div>
+    <FavouritesMain/>
   )
 }
 
