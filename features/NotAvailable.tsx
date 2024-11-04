@@ -1,9 +1,10 @@
-import { CarProps } from '@/types/Types'
 import React from 'react'
 
-const NotAvailable = ({car}:{car:CarProps}) => {
+const NotAvailable = ({text}:{text:string}) => {
   return (
-    <span className='w-80 md:w-full self-center' >This car has been rented by {car?.rentedBy?.includes('1') ? 'you':'someone else. Check back later.'}</span>
+    <div className="flex items-center justify-center w-full h-[60vh]">
+      <span className='w-[80%]  font-bold text-2xl text-center' >{text}</span>
+    </div>
   )
 }
 

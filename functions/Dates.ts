@@ -1,3 +1,5 @@
+import { timeRemaining } from "@juniorfixhow/durationjs";
+
 export function formatDateTime(date: Date): string {
     const options: Intl.DateTimeFormatOptions = {
       day: '2-digit',
@@ -48,4 +50,12 @@ export function getTimeDifferenceInDays(date1: Date, date2: Date): number {
     const differenceInMilliseconds = Math.abs(date2.getTime() - date1.getTime());
     const differenceInDays = differenceInMilliseconds / (1000 * 60 * 60 * 24); // Convert milliseconds to days
     return Math.ceil(differenceInDays); // Ceil the result
+}
+
+export const formatTimeRemaining =(date:Date)=>{
+    if(timeRemaining(date)?.includes('ending')){
+        return 'Due now'
+    }else{
+        return `${timeRemaining(date)} remaining`
+    }
 }

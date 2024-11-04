@@ -1,12 +1,11 @@
 'use client'
 import { SmallButton } from "@/features/Texts";
 import { formatDateTime } from "@/functions/Dates";
+import Back from "@/misc/Back";
 import { CarProps } from "@/types/Types";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { IoIosHeartEmpty, IoMdHeart } from "react-icons/io";
-import { MdKeyboardBackspace } from "react-icons/md";
 
 const CarDetails = ({car}:{car:CarProps}) => {
 
@@ -16,10 +15,7 @@ const CarDetails = ({car}:{car:CarProps}) => {
     <div className="flex flex-col gap-4" >
 
         <div className="flex flex-row items-center justify-between">
-            <Link href='/cars'  className="flex flex-row gap-3 items-center">
-                <MdKeyboardBackspace />
-                <span className="" >Back</span>
-            </Link>
+           <Back/>
             {
                 car?.pricePerHour ?
                 <span>${car?.pricePerHour}/<small className="text-[0.7rem]" >hour</small> </span>

@@ -43,3 +43,15 @@ export type ServiceProp ={
     image:string,
     imageDark:string
 }
+
+export type NotificationProps = {
+    id:string /*number*/
+    title:string,
+    userId:string /*number*/
+    orderId?:string /*number*/
+    carId?:string /*number*/
+    content:string,
+    read:boolean,
+    specialContent?:ReactNode,
+    time:Date,
+}

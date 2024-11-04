@@ -32,4 +32,11 @@ export const RoundButton = ({text, className, ...props}:{text:string}& Component
   )
 }
 
+export const GoButton = ({text, className, ...props}:{text:string}& ComponentProps<'button'>) => {
+  return (
+    <button className={`text-[0.8rem]  dark:border  ${className}`} {...props} >{text}</button>
+  )
+}
+
+
 
