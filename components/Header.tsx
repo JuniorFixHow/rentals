@@ -1,7 +1,8 @@
 'use client'
 
 import { useTheme } from "@/context/ThemeContext"
-import Image from "next/image"
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs"
+// import Image from "next/image"
 
 const Header = () => {
     const {toggleTheme} = useTheme()
@@ -12,7 +13,16 @@ const Header = () => {
             <button onClick={toggleTheme}  className='bg-white text-black text-[0.7rem] rounded-full px-2 py-1' >Light Mode</button>
             <button onClick={toggleTheme}  className='bg-black border-0 text-white text-[0.7rem] rounded-full px-2 py-1' >Dark Mode</button>
         </div>
-        <Image alt="user" className="rounded-full" height={30} width={30} src='/user.png' />
+
+        {/* <Image alt="user" className="rounded-full" height={30} width={30} src='/user.png' /> */}
+        <SignedOut>
+          <div className="border px-2 py-1 hover:bg-slate-100 dark:hover:border-slate-400 dark:hover:bg-transparent dark:bg-black rounded-full dark:text-white" >
+            <SignInButton />
+          </div>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
     </header>
   )
 }
