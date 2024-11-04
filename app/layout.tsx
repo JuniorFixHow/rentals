@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/Header";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ButtonNav from "@/components/ButtonNav";
+// import Header from "@/components/Header";
+// import Navbar from "@/components/Navbar";
+// import Footer from "@/components/Footer";
+// import ButtonNav from "@/components/ButtonNav";
 import { Providers } from "./Providers";
+import { ContentProvider } from "@/misc/ContentProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,15 +36,9 @@ export default function RootLayout({
       >
           <Providers>
 
-            <div className="flex flex-col dark:text-white bg-white dark:bg-[#0D0F11] font-inter">
-              <Header/>
-              <div className="flex flex-row gap-4 mt-4">
-                <Navbar/>
-                {children}
-              </div>
-              <ButtonNav/>
-              <Footer/>
-            </div>
+            <ContentProvider>
+              {children}
+            </ContentProvider>
           </Providers>
        
       </body>
