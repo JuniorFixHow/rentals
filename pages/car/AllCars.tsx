@@ -12,7 +12,7 @@ export type ToggleProps = {
 
 const AllCars = ({setToggleNav}:ToggleProps) => {
   return (
-    <div className='flex flex-col pb-36 md:pb-8 gap-4 w-full sm:grow px-4' >
+    <div className='flex flex-col pb-36 md:pb-8 gap-4 w-full md:w-fit sm:grow px-4 ' >
       <div className="flex flex-row items-center justify-between w-full">
         <div className="flex flex-row items-center gap-4">
           <Subtitle className='hidden sm:block' text='Featured Collections' />
@@ -23,7 +23,7 @@ const AllCars = ({setToggleNav}:ToggleProps) => {
         <SmallButtonText text='View All' />
       </div>
 
-      <div className={`flex w-full flex-col gap-5 items-center sm:grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 sm:gap-4`}>
+      <div className={`flex w-full flex-col gap-5 items-center place-items-center sm:grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 sm:gap-4`}>
         {
           CarsData.slice(0,9).map((car)=>(
             <CarDisplay key={car.id} car={car} />

@@ -9,7 +9,7 @@ export const metadata:Metadata = {
 
 const page = () => {
   return (
-    <div className='w-full md:w-fit' ><CarMain/></div>
+    <div className='w-full' ><CarMain/></div>
   )
 }
 

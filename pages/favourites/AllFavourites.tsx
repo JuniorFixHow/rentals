@@ -8,7 +8,7 @@ import { CarsData } from '@/data/Dummy'
 const AllFavourites = ({setToggleNav}:ToggleProps) => {
     // console.log(CarsData.filter((item)=>item.favourites.includes('1')).length)
   return (
-    <div className='flex flex-col pb-36 md:pb-8 gap-4 w-full sm:grow px-4' >
+    <div className='flex flex-col pb-36 md:pb-8 gap-4 w-full md:w-fit sm:grow px-4' >
       <div className="flex flex-row items-center justify-between w-full">
         <div className="flex flex-row items-center gap-4">
           <Subtitle  text='Your favourites' />

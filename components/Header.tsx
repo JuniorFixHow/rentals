@@ -17,7 +17,7 @@ const Header = () => {
         {/* <Image alt="user" className="rounded-full" height={30} width={30} src='/user.png' /> */}
         <SignedOut>
           <div className="border px-2 py-1 hover:bg-slate-100 dark:hover:border-slate-400 dark:hover:bg-transparent dark:bg-black rounded-full dark:text-white" >
-            <SignInButton />
+            <SignInButton mode='modal' />
           </div>
         </SignedOut>
         <SignedIn>

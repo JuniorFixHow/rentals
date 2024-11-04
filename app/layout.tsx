@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-// import Header from "@/components/Header";
-// import Navbar from "@/components/Navbar";
-// import Footer from "@/components/Footer";
-// import ButtonNav from "@/components/ButtonNav";
-import { Providers } from "./Providers";
-// import { ContentProvider } from "@/misc/ContentProvider";
+import Header from "@/components/Header";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/context/ThemeContext";
+import ButtonNav from "@/components/ButtonNav";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,15 +30,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+      <ClerkProvider>
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-          <Providers>
-              {children}
-          </Providers>
-       
+        <ThemeProvider>
+            <div className="flex flex-col dark:text-white bg-white dark:bg-[#0D0F11] font-inter">
+              <Header/>
+              <div className="flex flex-row gap-4 mt-4">
+                <Navbar/>
+                {children}
+              </div>
+              <ButtonNav/>
+              <Footer/>
+            </div>
+        </ThemeProvider>
       </body>
     </html>
+          </ClerkProvider>
   );
 }
