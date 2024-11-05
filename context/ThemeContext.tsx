@@ -28,8 +28,8 @@ export default function ThemeProvider ({ children }:{children:ReactNode}) {
   };
 
   return (
-    <ThemeContext.Provider value={{ isDark, toggleTheme }}>
+    <ThemeContext value={{ isDark, toggleTheme }}>
       {children}
-    </ThemeContext.Provider>
+    </ThemeContext>
   );
 };
