@@ -1,4 +1,5 @@
 // layout.tsx
+// "use client"
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -32,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* Wrap entire layout in ClerkProvider */}
-      <ClerkProvider>
+      {/* <ClerkProvider> */}
         <ThemeProvider>
           <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
             <div className="flex flex-col dark:text-white bg-white dark:bg-[#0D0F11] font-inter">
@@ -46,7 +47,7 @@ export default function RootLayout({
             </div>
           </body>
         </ThemeProvider>
-      </ClerkProvider>
+      {/* </ClerkProvider> */}
     </html>
   );
 }
