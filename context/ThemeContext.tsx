@@ -1,23 +1,17 @@
 // context/ThemeContext.tsx
 'use client'
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { createContext,  useEffect, useState, ReactNode } from 'react';
 
-interface ThemeContextType {
+export interface ThemeContextType {
   isDark: boolean;
   toggleTheme: () => void;
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+export const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export const useTheme = (): ThemeContextType => {
-  const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider');
-  }
-  return context;
-};
 
-export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+
+export default function ThemeProvider ({ children }:{children:ReactNode}) {
   const [isDark, setIsDark] = useState<boolean>(false);
 
   useEffect(() => {

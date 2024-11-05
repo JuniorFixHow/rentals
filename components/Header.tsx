@@ -1,11 +1,12 @@
-'use client'
+"use client"
 
-import { useTheme } from "@/context/ThemeContext"
+import { useTheme } from "@/context/ThemeProvider"
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs"
 // import Image from "next/image"
 
 const Header = () => {
     const {toggleTheme} = useTheme()
+    // console.log('dark: ',isDark)
   return (
     <header className='flex px-4 flex-row items-center justify-between py-4' >
         <h1>LOGO</h1>

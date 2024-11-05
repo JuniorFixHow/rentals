@@ -4,10 +4,10 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ThemeProvider } from "@/context/ThemeContext";
 import ButtonNav from "@/components/ButtonNav";
+import Providers from "./Providers";
+import ThemeProvider from "@/context/ThemeContext";
 // import { ClerkProvider } from "@clerk/nextjs";
-import { Providers } from "./Providers";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,17 +27,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
+      <Providers>
+        <ThemeProvider>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-        <ThemeProvider>
             <div className="flex flex-col dark:text-white bg-white dark:bg-[#0D0F11] font-inter">
-        <Providers>
               <Header/>
               <div className="flex flex-row gap-4 mt-4">
                 <Navbar/>
@@ -45,10 +45,10 @@ export default function RootLayout({
               </div>
               <ButtonNav/>
               <Footer/>
-          </Providers>
             </div>
-        </ThemeProvider>
       </body>
+        </ThemeProvider>
+          </Providers>
     </html>
   );
 }

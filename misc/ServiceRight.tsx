@@ -1,7 +1,11 @@
+"use client"
+import { useTheme } from '@/context/ThemeProvider'
 import { ServiceLeftProps } from './ServiceLeft'
 import Image from 'next/image'
 
 const ServiceRight = ({serviceCard}:ServiceLeftProps) => {
+  const {isDark} = useTheme()
+  // console.log('darki: ',isDark)
   return (
     <div className='bg-slate-100 hidden dark:bg-slate-800 md:flex relative rounded-lg p-3' >
         
@@ -9,7 +13,7 @@ const ServiceRight = ({serviceCard}:ServiceLeftProps) => {
             0{serviceCard?.id}
         </div>
         {/* <div className={'h-[25rem] bg-black w-[20rem]'} ></div> */}
-        <Image height={500} width={300} alt='service' src={ serviceCard?.image}  />
+        <Image height={500} width={300} alt='service' src={isDark? serviceCard?.imageDark: serviceCard?.image}  />
     </div>
   )
 }
