@@ -4,7 +4,7 @@ import { CarProps } from '@/types/Types'
 import React, { useEffect, useState } from 'react'
 // import { RoundButton } from './Texts'
 import DialogItem from '@/misc/Dialog'
-// import { useUser } from '@clerk/nextjs'
+import { useUser } from '@clerk/nextjs'
 // import Link from 'next/link'
 
 const CarPayment = ({car}:{car:CarProps}) => {
@@ -13,7 +13,7 @@ const CarPayment = ({car}:{car:CarProps}) => {
     const [totalTime, setTotalTime] = useState<number>(0);
     const [totalAmount, setTotalAmount] = useState<number>(0);
     const [open, setOpen] = useState<boolean>(false);
-    // const {isLoaded, isSignedIn} = useUser()
+    const {isLoaded} = useUser()
 
 
     useEffect(()=>{
@@ -30,7 +30,7 @@ const CarPayment = ({car}:{car:CarProps}) => {
     },[start, end, car])
 
     const text="This car has already been booked. Be the first to get notified after it has been realeased by placing an order. Continue?"
-    // if((car?.rented && car.rentedBy === '1') || !isLoaded) return null
+    if((car?.rented && car.rentedBy === '1') || !isLoaded) return null
 
   return (
    

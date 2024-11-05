@@ -1,9 +1,8 @@
 "use client"
 
 import { useTheme } from "@/context/ThemeProvider"
-// import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs"
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs"
 import Image from "next/image"
-// import Image from "next/image"
 
 const Header = () => {
     const {toggleTheme} = useTheme()
@@ -16,14 +15,14 @@ const Header = () => {
         </div>
 
         <Image alt="user" className="rounded-full" height={30} width={30} src='/user.png' />
-        {/* <SignedOut>
+        <SignedOut>
           <div className="border px-2 py-1 hover:bg-slate-100 dark:hover:border-slate-400 dark:hover:bg-transparent dark:bg-black rounded-full dark:text-white" >
             <SignInButton mode='modal' />
           </div>
         </SignedOut>
         <SignedIn>
           <UserButton />
-        </SignedIn> */}
+        </SignedIn>
     </header>
   )
 }
