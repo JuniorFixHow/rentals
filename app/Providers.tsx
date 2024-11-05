@@ -1,11 +1,12 @@
 "use client"
-import { ClerkProvider } from "@clerk/nextjs";
+import MainProvider from "@/components/Main";
+// import { ClerkProvider } from "@clerk/nextjs";
 import { ReactNode } from "react";
 
 export default function Providers ({children}:{children:ReactNode}){
     return(
-        <ClerkProvider>
+        <MainProvider>
             {children}
-        </ClerkProvider>
+        </MainProvider>
     )
 }

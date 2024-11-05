@@ -8,7 +8,8 @@ import "./globals.css";
 // import Footer from "@/components/Footer";
 // import ButtonNav from "@/components/ButtonNav";
 import ThemeProvider from "@/context/ThemeContext";
-import MainProvider from "@/components/Main";
+// import MainProvider from "@/components/Main";
+import Providers from "./Providers";
 // import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = localFont({
@@ -37,9 +38,9 @@ export default function RootLayout({
       {/* <ClerkProvider> */}
         <ThemeProvider>
           <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-            <MainProvider>
+            <Providers>
               {children}
-            </MainProvider>
+            </Providers>
           </body>
         </ThemeProvider>
       {/* </ClerkProvider> */}

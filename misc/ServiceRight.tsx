@@ -1,7 +1,10 @@
+import { useTheme } from '@/context/ThemeProvider'
 import { ServiceLeftProps } from './ServiceLeft'
 import Image from 'next/image'
 
 const ServiceRight = ({serviceCard}:ServiceLeftProps) => {
+  const {isDark} = useTheme()
+  console.log('dark service: ', isDark)
   return (
     <div className='bg-slate-100 hidden dark:bg-slate-800 md:flex relative rounded-lg p-3' >
         
