@@ -1,6 +1,6 @@
 // context/ThemeContext.tsx
 'use client'
-import { createContext,  useEffect, useState,  PropsWithChildren } from 'react';
+import { createContext,  useEffect, useState,   ReactNode } from 'react';
 
 export interface ThemeContextType {
   isDark: boolean;
@@ -11,7 +11,7 @@ export const ThemeContext = createContext<ThemeContextType | null>(null);
 
 
 
-export default function ThemeProvider ({ children }:PropsWithChildren) {
+export default function ThemeProvider ({ children }:{children:ReactNode}) {
   const [isDark, setIsDark] = useState<boolean>(false);
 
   useEffect(() => {
