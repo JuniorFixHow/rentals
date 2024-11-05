@@ -1,3 +1,4 @@
+import MainProvider from "@/components/Main"
 import FavouritesMain from "@/pages/favourites/FavouritesMain"
 import { Metadata } from "next"
 
@@ -8,7 +9,11 @@ export const metadata:Metadata = {
 
 const page = () => {
   return (
-    <div className='w-full' ><FavouritesMain/></div>
+    <div className='w-full' >
+      <MainProvider>
+        <FavouritesMain/>
+      </MainProvider>
+    </div>
     
   )
 }

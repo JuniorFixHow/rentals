@@ -1,3 +1,4 @@
+import MainProvider from '@/components/Main'
 import NotificationMain from '@/pages/notification/NotificationMain'
 import { Metadata } from 'next'
 import React from 'react'
@@ -10,7 +11,9 @@ export const metadata:Metadata = {
 const page = () => {
   return (
     <div className='w-full' >
+      <MainProvider>
         <NotificationMain/>
+      </MainProvider>
     </div>
   )
 }
