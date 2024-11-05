@@ -1,3 +1,4 @@
+"use client"
 import { useTheme } from '@/context/ThemeProvider'
 import { ServiceLeftProps } from './ServiceLeft'
 import Image from 'next/image'
