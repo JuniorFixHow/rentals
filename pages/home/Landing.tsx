@@ -1,6 +1,10 @@
+"use client"
+import { useUser } from '@clerk/nextjs'
 import React from 'react'
 
 const Landing = () => {
+  const {isSignedIn} = useUser()
+  if(!isSignedIn) return null
   return (
     <div className='h-[65vh] md:h-[80vh] bg-[url(/car-160895_1920.png)] bg-contain bg-center bg-no-repeat flex flex-col gap-8 items-center justify-between' >
         <span className='text-4xl scroll-m-8 font-seaweed font-bold bg-gradient-to-r from-blue-950 to-orange-500 bg-clip-text text-transparent' >Diamond Fleet Rentals</span>
