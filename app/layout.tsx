@@ -27,15 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* Wrap entire layout in ClerkProvider */}
-          <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-            {/* <ClerkProvider> */}
-
-            <Providers>
-              {children}
-            </Providers>
-            {/* </ClerkProvider> */}
-          </body>
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+          <Providers>
+            {children}
+          </Providers>
+        </body>
     </html>
   );
 }
