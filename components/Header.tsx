@@ -6,8 +6,7 @@ import Image from "next/image"
 // import Image from "next/image"
 
 const Header = () => {
-    const {toggleTheme, isDark} = useTheme()
-    console.log('dark head: ',isDark)
+    const {toggleTheme} = useTheme()
   return (
     <header className='flex px-4 flex-row items-center justify-between py-4' >
         <h1>LOGO</h1>

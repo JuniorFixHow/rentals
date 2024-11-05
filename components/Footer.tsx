@@ -1,9 +1,12 @@
 "use client"
+import { useTheme } from '@/context/ThemeProvider'
 import { RoundButton } from '@/features/Texts'
 import Link from 'next/link'
 import React from 'react'
 
 const Footer = () => {
+  const {isDark} = useTheme()
+  console.log('dark footer: ', isDark)
   return (
     <div className='bg-[#0C111D] px-8 pt-6 pb-[10rem] md:pb-4 flex flex-col gap-6 md:gap-10' >
       <div className="flex flex-col gap-4 md:flex-row justify-between items-center">
