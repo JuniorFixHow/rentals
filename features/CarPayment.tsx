@@ -15,8 +15,7 @@ const CarPayment = ({car}:{car:CarProps}) => {
     const [open, setOpen] = useState<boolean>(false);
     const {isLoaded, isSignedIn} = useUser()
 
-
-
+    
     useEffect(()=>{
         if(car?.pricePerHour){
             const time = getTimeDifferenceInHours(start, end)
@@ -24,14 +23,14 @@ const CarPayment = ({car}:{car:CarProps}) => {
             setTotalTime(time);
         }else if(car?.pricePerDay)
             {
-            const time = getTimeDifferenceInDays(start, end);
+                const time = getTimeDifferenceInDays(start, end);
             setTotalAmount(time*car?.pricePerDay)
             setTotalTime(time);
         }
     },[start, end, car])
 
-    const text="This car has already been booked. Be the first to get notified after it has been realeased by placing an order. Continue?"
     if((car?.rented && car.rentedBy === '1') || !isLoaded) return null
+    const text="This car has already been booked. Be the first to get notified after it has been realeased by placing an order. Continue?"
 
   return (
    

@@ -1,3 +1,4 @@
+"use client"
 import { CarsData } from "@/data/Dummy";
 import SingleCar from "@/pages/car/single/SingleCar"
 import { Metadata } from "next";
