@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ButtonNav from "@/components/ButtonNav";
 import ThemeProvider from "@/context/ThemeContext";
+import MainProvider from "@/components/Main";
 // import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = localFont({
@@ -36,15 +37,9 @@ export default function RootLayout({
       {/* <ClerkProvider> */}
         <ThemeProvider>
           <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-            <div className="flex flex-col dark:text-white bg-white dark:bg-[#0D0F11] font-inter">
-              <Header />
-              <div className="flex flex-row gap-4 mt-4">
-                <Navbar />
-                {children}
-              </div>
-              <ButtonNav />
-              <Footer />
-            </div>
+            <MainProvider>
+              {children}
+            </MainProvider>
           </body>
         </ThemeProvider>
       {/* </ClerkProvider> */}

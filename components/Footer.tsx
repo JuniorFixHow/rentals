@@ -1,3 +1,4 @@
+"use client"
 import { RoundButton } from '@/features/Texts'
 import Link from 'next/link'
 import React from 'react'
