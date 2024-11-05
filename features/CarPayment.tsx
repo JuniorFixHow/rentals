@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import { getTimeDifferenceInDays, getTimeDifferenceInHours, today } from '@/functions/Dates'
 import { CarProps } from '@/types/Types'
 import React, { useEffect, useState } from 'react'
@@ -30,7 +30,7 @@ const CarPayment = ({car}:{car:CarProps}) => {
     },[start, end, car])
 
     const text="This car has already been booked. Be the first to get notified after it has been realeased by placing an order. Continue?"
-    if((car?.rented && car.rentedBy === '1') || !isLoaded) return null
+    if((car?.rented && car?.rentedBy === '1') || !isLoaded) return null
 
   return (
    
