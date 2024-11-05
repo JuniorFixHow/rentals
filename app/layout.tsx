@@ -3,10 +3,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/Header";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ButtonNav from "@/components/ButtonNav";
+// import Header from "@/components/Header";
+// import Navbar from "@/components/Navbar";
+// import Footer from "@/components/Footer";
+// import ButtonNav from "@/components/ButtonNav";
 import ThemeProvider from "@/context/ThemeContext";
 import MainProvider from "@/components/Main";
 // import { ClerkProvider } from "@clerk/nextjs";
