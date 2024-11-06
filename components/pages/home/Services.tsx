@@ -1,5 +1,5 @@
-import HowItWorks from "@/features/HowItWorks"
-import OurServices from "@/features/OurServices"
+import HowItWorks from "@/components/features/HowItWorks"
+import OurServices from "@/components/features/OurServices"
 import Link from "next/link"
 
 const Services = () => {

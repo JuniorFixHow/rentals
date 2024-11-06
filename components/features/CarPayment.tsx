@@ -2,10 +2,11 @@
 import { getTimeDifferenceInDays, getTimeDifferenceInHours, today } from '@/functions/Dates'
 import { CarProps } from '@/types/Types'
 import React, { useEffect, useState } from 'react'
-// import { RoundButton } from './Texts'
-import DialogItem from '@/misc/Dialog'
+import { RoundButton } from './Texts'
+import DialogItem from '@/components/misc/Dialog'
+import { useUser } from '@clerk/nextjs'
 // import { useUser } from '@clerk/nextjs'
-// import Link from 'next/link'
+import Link from 'next/link'
 
 const CarPayment = ({car}:{car:CarProps}) => {
     const [start, setStart] = useState<Date>(new Date())
@@ -13,7 +14,7 @@ const CarPayment = ({car}:{car:CarProps}) => {
     const [totalTime, setTotalTime] = useState<number>(0);
     const [totalAmount, setTotalAmount] = useState<number>(0);
     const [open, setOpen] = useState<boolean>(false);
-    // const {isLoaded} = useUser()
+    const {isLoaded, isSignedIn} = useUser()
 
 
     useEffect(()=>{
@@ -30,7 +31,7 @@ const CarPayment = ({car}:{car:CarProps}) => {
     },[start, end, car])
 
     const text="This car has already been booked. Be the first to get notified after it has been realeased by placing an order. Continue?"
-    // if((car?.rented && car?.rentedBy === '1') || !isLoaded) return null
+    if((car?.rented && car?.rentedBy === '1') || !isLoaded) return null
 
   return (
    
@@ -69,7 +70,7 @@ const CarPayment = ({car}:{car:CarProps}) => {
 
         <div className="flex flex-row items-center justify-between">
             <span>Total price: ${totalAmount === 0 ? 0:(totalAmount+2).toFixed(2)}</span>
-            {/* {
+            {
                 !isSignedIn ?
                     <Link href='/sign-in' >
                         <RoundButton 
@@ -81,7 +82,7 @@ const CarPayment = ({car}:{car:CarProps}) => {
                     onClick={car?.rented ? ()=>setOpen(true) : ()=>{}} 
                     text={car?.rented ?'Place order':'Rent car'} className='bg-[#3A80F4] px-4 py-2 hover:bg-[#3575db]' 
                 />
-            } */}
+            }
         </div>
     </div>
      

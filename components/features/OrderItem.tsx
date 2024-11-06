@@ -5,7 +5,7 @@ import { ComponentProps, useState } from 'react'
 import { GoButton } from './Texts'
 import Link from 'next/link'
 import { CarProps } from '@/types/Types'
-import DialogItem from '@/misc/Dialog'
+import DialogItem from '@/components/misc/Dialog'
 
 const OrderItem = ({car, className, ...props}:{car:CarProps} & ComponentProps<'div'>) => {
     const [open, setOpen] = useState<boolean>(false)

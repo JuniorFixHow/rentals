@@ -1,4 +1,4 @@
-import BookingsMain from '@/pages/bookings/BookingsMain'
+import BookingsMain from '@/components/pages/bookings/BookingsMain'
 import { Metadata } from 'next'
 import React from 'react'
 

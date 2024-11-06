@@ -1,5 +1,5 @@
-import CarPayment from "@/features/CarPayment"
-import Map from "@/features/Map"
+import CarPayment from "@/components/features/CarPayment"
+import Map from "@/components/features/Map"
 import { CarProps } from "@/types/Types"
 
 const PaymentSide = ({car}:{car:CarProps}) => {

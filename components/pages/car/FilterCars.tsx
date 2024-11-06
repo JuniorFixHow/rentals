@@ -1,6 +1,6 @@
 'use client'
 import { CarTypes, ColoursData, InsuranceData, RentalTypes } from '@/data/Dummy';
-import {Small, SmallButtonText, Subtitle} from '@/features/Texts'
+import {Small, SmallButtonText, Subtitle} from '@/components/features/Texts'
 import {  Slider, Switch } from '@mui/material';
 import React, { useState } from 'react'
 

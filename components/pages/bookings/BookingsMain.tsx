@@ -1,4 +1,4 @@
-import Back from '@/misc/Back'
+import Back from '@/components/misc/Back'
 import React from 'react'
 import AllBookings from './AllBookings'
 

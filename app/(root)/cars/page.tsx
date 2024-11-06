@@ -1,4 +1,4 @@
-import CarMain from '@/pages/car/CarMain'
+import CarMain from '@/components/pages/car/CarMain'
 import { Metadata } from 'next'
 import React from 'react'
 

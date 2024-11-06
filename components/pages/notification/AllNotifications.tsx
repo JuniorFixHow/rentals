@@ -1,6 +1,6 @@
 'use client'
 import { NotificationsData } from '@/data/Dummy';
-import NotificationItem from '@/features/NotificationItem'
+import NotificationItem from '@/components/features/NotificationItem'
 import { useState } from 'react';
 
 const AllNotifications = () => {

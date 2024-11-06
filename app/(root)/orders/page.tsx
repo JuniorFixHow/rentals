@@ -1,4 +1,4 @@
-import OrdersMain from "@/pages/order/OrdersMain"
+import OrdersMain from "@/components/pages/order/OrdersMain"
 import { Metadata } from "next"
 
 export const metadata:Metadata = {

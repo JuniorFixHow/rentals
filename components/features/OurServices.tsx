@@ -1,6 +1,6 @@
 import React from 'react'
 import { Subtitle } from './Texts'
-import ServiceItem from '@/misc/ServiceItem'
+import ServiceItem from '@/components/misc/ServiceItem'
 import { MdOutlineDirectionsCarFilled } from 'react-icons/md'
 import { BsShieldCheck } from "react-icons/bs";
 import { PiPhoneCallDuotone } from "react-icons/pi";

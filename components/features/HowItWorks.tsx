@@ -1,8 +1,8 @@
 'use client'
 
 import { ServiceData } from "@/data/Dummy"
-import ServiceLeft from "@/misc/ServiceLeft"
-import ServiceRight from "@/misc/ServiceRight"
+import ServiceLeft from "@/components/misc/ServiceLeft"
+import ServiceRight from "@/components/misc/ServiceRight"
 import { ServiceProp } from "@/types/Types"
 import { useState } from "react"
 

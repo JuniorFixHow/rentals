@@ -12,38 +12,44 @@ import Link from "next/link";
 export const NavbarLinks:NavbarProps[] = [
     {
         id:1,
-        icon:<Link href='/' ><CiHome/></Link> 
+        icon:<CiHome/>,
+        link:'/'
     },
     {
         id:2,
-        icon:<Link href='/cars' ><BiTaxi/></Link> 
+        icon:<BiTaxi/>,
+        link:'/cars'
     },
     {
         id:3,
-        icon:<Link href='/bookings' ><IoCalendarOutline/></Link>
+        icon:<IoCalendarOutline/>,
+        link:'/bookings'
     },
     {
         id:4,
-        icon:<Link href='/favourites' ><FaRegHeart/></Link>
+        icon:<FaRegHeart/>,
+        link:'/favourites'
     },
     {
         id:5,
-        icon:<Link href='/orders' ><GoPackage/></Link>
+        icon:<GoPackage/>,
+        link:'/orders'
     },
 ]
 
 export const NavbarHelps:NavbarProps[] = [
     {
         id:6,
-        icon:<Link href='/notifications' ><FaRegBell/></Link>
+        icon:<FaRegBell/>,
+        link:'/notifications'
     },
     {
         id:7,
-        icon:<Link href='mailto:diamondtoursgh@gmail.com' ><IoMdHelpCircleOutline/></Link>
+        icon:<Link href='mailto:diamondtoursgh@gmail.com' target='_blank' ><IoMdHelpCircleOutline/></Link>,
     },
     {
         id:8,
-        icon:<RiLogoutCircleRLine color="crimson" />
+        icon:<RiLogoutCircleRLine color="crimson" />,
     },
     
 ] 

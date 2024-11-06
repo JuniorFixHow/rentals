@@ -3,6 +3,7 @@ import { ReactNode } from "react"
 export type NavbarProps = {
     id:number,
     icon:ReactNode,
+    link?:string
 }
 
 export type CarTypeProps = string

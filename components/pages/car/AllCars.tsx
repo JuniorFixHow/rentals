@@ -1,6 +1,6 @@
 import { CarsData } from '@/data/Dummy'
-import CarDisplay from '@/features/CarDisplay';
-import {  SmallButtonText, Subtitle } from '@/features/Texts'
+import CarDisplay from '@/components/features/CarDisplay';
+import {  SmallButtonText, Subtitle } from '@/components/features/Texts'
 
 import { Dispatch, SetStateAction } from 'react';
 import { IoFilterOutline } from "react-icons/io5";

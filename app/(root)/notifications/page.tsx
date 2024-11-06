@@ -1,4 +1,4 @@
-import NotificationMain from '@/pages/notification/NotificationMain'
+import NotificationMain from '@/components/pages/notification/NotificationMain'
 import { Metadata } from 'next'
 import React from 'react'
 

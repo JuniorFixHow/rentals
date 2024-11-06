@@ -1,5 +1,5 @@
-import CarDisplay from '@/features/CarDisplay'
-import { SmallButtonText, Subtitle } from '@/features/Texts'
+import CarDisplay from '@/components/features/CarDisplay'
+import { SmallButtonText, Subtitle } from '@/components/features/Texts'
 import React from 'react'
 import { IoFilterOutline } from 'react-icons/io5'
 import { ToggleProps } from '../car/AllCars'

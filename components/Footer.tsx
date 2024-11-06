@@ -1,5 +1,5 @@
 // import { useTheme } from '@/context/ThemeProvider'
-import { RoundButton } from '@/features/Texts'
+import { RoundButton } from '@/components/features/Texts'
 import Link from 'next/link'
 import React from 'react'
 

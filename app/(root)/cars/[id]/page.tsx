@@ -1,5 +1,5 @@
 import { CarsData } from "@/data/Dummy";
-import SingleCar from "@/pages/car/single/SingleCar"
+import SingleCar from "@/components/pages/car/single/SingleCar"
 import { Metadata } from "next";
 
 export const metadata:Metadata = {

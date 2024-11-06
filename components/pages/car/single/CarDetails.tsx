@@ -1,7 +1,7 @@
 'use client'
-import { SmallButton } from "@/features/Texts";
+import { SmallButton } from "@/components/features/Texts";
 import { formatDateTime } from "@/functions/Dates";
-import Back from "@/misc/Back";
+import Back from "@/components/misc/Back";
 import { CarProps } from "@/types/Types";
 import Image from "next/image";
 import { useState } from "react";
