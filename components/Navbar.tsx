@@ -1,10 +1,13 @@
 'use client'
 import { NavbarHelps, NavbarLinks } from '@/data/Links'
+import { useUser } from '@clerk/nextjs';
 import React, { useState } from 'react'
 
 
 const Navbar = () => {
     const [currentLink, setCurrentLink] = useState<number>(1);
+    const {isSignedIn} = useUser()
+    console.log(isSignedIn)
   return (
     <div className='hidden md:flex py-4 flex-col items-center min-h-[calc(100vh-4rem)] w-28 bg-white dark:border-r dark:bg-[#0D0F11]' >
         <div className="flex flex-col h-[calc(100vh-8rem)] items-center justify-between">
