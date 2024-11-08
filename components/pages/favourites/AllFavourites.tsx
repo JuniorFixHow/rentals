@@ -1,12 +1,28 @@
+'use client'
 import CarDisplay from '@/components/features/CarDisplay'
 import { SmallButtonText, Subtitle } from '@/components/features/Texts'
-import React from 'react'
+import React, { useState } from 'react'
 import { IoFilterOutline } from 'react-icons/io5'
 import { ToggleProps } from '../car/AllCars'
 import { CarsData } from '@/data/Dummy'
+import { filterCars } from '@/functions/search'
 
-const AllFavourites = ({setToggleNav}:ToggleProps) => {
+const AllFavourites = ({
+  setToggleNav,
+  brand,
+  model,
+  colour, 
+  type,
+  insurance,
+  rented, 
+  rentType, 
+  price, 
+}:ToggleProps) => {
     // console.log(CarsData.filter((item)=>item.favourites.includes('1')).length)
+    const [range, setRange] = useState<number>(9)
+    const cars = filterCars(CarsData, brand, model,
+      colour, type, insurance, rented, rentType, price
+    )
   return (
     <div className='flex flex-col pb-36 md:pb-8 gap-4 w-full md:w-fit sm:grow px-4' >
       <div className="flex flex-row items-center justify-between w-full">
@@ -16,12 +32,12 @@ const AllFavourites = ({setToggleNav}:ToggleProps) => {
             <IoFilterOutline/>
           </div>
         </div>
-        <SmallButtonText text='View All' />
+        <SmallButtonText onClick={()=>setRange(cars.length)} text='View All' />
       </div>
 
       <div className={`flex w-full flex-col gap-5 items-center sm:grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 sm:gap-4`}>
         {
-          CarsData?.filter((item)=>item.favourites.includes('1')).slice(0,9).map((car)=>(
+          cars?.slice(0,range).filter((item)=>item.favourites.includes('1')).slice(0,9).map((car)=>(
             <CarDisplay key={car.id} car={car} />
           ))
         }
