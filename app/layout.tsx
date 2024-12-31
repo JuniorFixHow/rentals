@@ -17,7 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Diamond Fleet Rentals",
+  title: "Lysander Auto Rentals",
 };
 
 export default function RootLayout({
