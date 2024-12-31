@@ -53,7 +53,7 @@ const CarDetails = ({car}:{car:CarProps}) => {
 
         <div className="flex flex-row items-center justify-between">
            <Back/>
-           <span>${car?.price}/<small className="text-[0.7rem]" >day</small> </span>
+           <span>GHC{car?.price}/<small className="text-[0.7rem]" >day</small> </span>
         </div>
 
         <div className="flex gap-6 dark:border items-center flex-col p-4 shadow-md rounded-3xl">

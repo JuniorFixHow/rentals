@@ -19,13 +19,13 @@ const BookingItem = ({rent, className, ...props}:{rent:IRent} & ComponentProps<'
                     <small className='text-slate-400' >{car?.name}</small>
                     <span>{car?.brand} {car?.model}</span>
                 </div>
-                <span>${car?.price}</span>
+                <span>GHC{car?.price}</span>
             </div>
 
             
             <div className="flex flex-row items-center justify-between py-1 border-b">
                 <small>Amount Paid</small>
-                <small className='font-bold' >${rent?.price}</small>
+                <small className='font-bold' >GHC{rent?.price}</small>
             </div>
             
             <div className="flex flex-row items-center justify-between py-1 border-b">

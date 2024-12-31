@@ -82,8 +82,8 @@ const CarDisplay = ({car, ...props}:{car:CarProps} & ComponentProps<'div'>) => {
             <div className="flex flex-col gap-1">
                 <span className='text-[#9498A5] text-[0.75rem]' >{car.name} | {car.model}</span>
                 <div className="flex flex-row justify-between">
-                <span className='tex-[0.7rem]' >{car.brand}, {car.year}</span>
-                <span className='tex-[0.8rem]' >${car?.price}/<small className='text-[0.65rem]' >day</small> </span>
+                <span className='text-[0.8rem]' >{car.brand}, {car.year}</span>
+                <span className='text-[0.8rem]' >GHC{car?.price}/<small className='text-[0.65rem]' >day</small> </span>
                 </div>
             </div>
 
