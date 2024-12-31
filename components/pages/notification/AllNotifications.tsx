@@ -1,5 +1,4 @@
 'use client'
-import { NotificationsData } from '@/data/Dummy';
 import NotificationItem from '@/components/features/NotificationItem'
 import { useState } from 'react';
 import { useFetchNotifications } from '@/hooks/useNotifications';
@@ -16,7 +15,7 @@ const AllNotifications = () => {
   return (
     <div className='w-full gap-6 flex flex-col' >
       { notis.length > 0 ?
-        NotificationsData.map((noti)=>(
+        notis.map((noti)=>(
           <NotificationItem isOpen={currentNotiId === noti.id}  handleClick={()=>handleNotiClick(noti.id)} key={noti.id} noti={noti} />
         ))
         :
