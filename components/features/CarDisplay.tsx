@@ -62,10 +62,15 @@ const CarDisplay = ({car, ...props}:{car:CarProps} & ComponentProps<'div'>) => {
             }
         </div>
         {
-            favourite?
-            <IoMdHeart onClick={handleRemoveFavourite}  className='cursor-pointer' color='#3A80F4' />
-            :
-            <IoIosHeartEmpty onClick={handleMakeFavourite}  className='cursor-pointer' color='#3A80F4' />
+            user &&
+            <>
+            {
+                favourite?
+                <IoMdHeart onClick={handleRemoveFavourite}  className='cursor-pointer' color='#3A80F4' />
+                :
+                <IoIosHeartEmpty onClick={handleMakeFavourite}  className='cursor-pointer' color='#3A80F4' />
+            }
+            </>
         }
         </div>
 
