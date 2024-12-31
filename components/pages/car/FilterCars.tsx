@@ -1,8 +1,7 @@
-import {  ColoursData, } from '@/data/Dummy';
 import {Small, SmallButtonText, Subtitle} from '@/components/features/Texts'
 import {  Slider } from '@mui/material';
 import React, { Dispatch, SetStateAction } from 'react'
-import { getCarBrands, getCarModels } from '@/functions/miscs';
+import { getCarBrands, getCarColours, getCarModels } from '@/functions/miscs';
 
 export type FilterProps = {
     // brand:string,
@@ -132,10 +131,10 @@ const FilterCars = ({
                 <Small text='Colour' />
                 <div className="grid grid-cols-3 gap-3">
                     {
-                        ColoursData.map((item)=>(
-                            <div onClick={()=>handleCheckedColours(item.name)}  className="flex flex-row items-center gap-1 cursor-pointer" key={item.code} >
-                                <div style={{backgroundColor:item.code, borderColor:colour.includes(item.name) ? item.secondary:'', borderWidth:2}}  className={`p-2 shadow-lg rounded-full`}/>
-                                <span className='text-[0.8rem]' >{item.name}</span>
+                        getCarColours().map((item)=>(
+                            <div onClick={()=>handleCheckedColours(item)}  className="flex flex-row items-center gap-1 cursor-pointer" key={item} >
+                                <div style={{backgroundColor:item.toLowerCase(), borderColor:colour.includes(item) ? 'red':'', borderWidth:2}}  className={`p-2 shadow-lg rounded-full`}/>
+                                <span className='text-[0.8rem]' >{item}</span>
                             </div>
                         ))
                     }

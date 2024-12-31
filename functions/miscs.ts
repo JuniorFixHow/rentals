@@ -52,6 +52,14 @@ export const getCarModels = (): string[] => {
     const items = CarsData
         .map((item) => item.model)
         .filter((model): model is string => model !== undefined && model !== null);
-    const uniqueBrands = [...new Set<string>(items)];
-    return uniqueBrands;
+    const uniqueModels = [...new Set<string>(items)];
+    return uniqueModels;
+};
+
+export const getCarColours = (): string[] => {
+    const items = CarsData
+        .map((item) => item.colour)
+        .filter((colour): colour is string => colour !== undefined && colour !== null);
+    const uniqueColours = [...new Set<string>(items)];
+    return uniqueColours;
 };
