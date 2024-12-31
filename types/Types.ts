@@ -1,3 +1,4 @@
+import { FieldValue, Timestamp } from "firebase/firestore"
 import { ReactNode } from "react"
 
 export type NavbarProps = {
@@ -21,20 +22,36 @@ export interface CarProps {
     colour:string;
     brand:string;
     model:string;
-    pricePerDay?:number;
-    pricePerHour?:number;
-    type:string; /*Sidan, Van, Pickup, Minivan, Wagon, Couple*/
-    rented:boolean;
-    rentedBy?:string,
+    price:number;
     new:boolean;
-    favourites:string[];
-    year?:string;
-    rentedFrom?:Date;
-    rentedTo?:Date;
-    rentType:'Per day'|'Per hour'|'Any';
-    insurance:string; /*Lokking for things like: Collision Damage Waiver, Roadside Plus,Personal Injury Protection*/
-    createdAt:Date;
-    //ADD FAVOURITES LATER
+    year:string;
+}
+
+export interface IRent{
+    id:string;
+    userId:string;
+    carId:string;
+    rentedFrom?:Timestamp;
+    rentedTo?:Timestamp;
+    price:number;
+    email:string;
+    name:string;
+    phone?:string;
+    createdAt:FieldValue;
+}
+
+export interface IFavourite{
+    id:string;
+    userId:string;
+    carId:string;
+    createdAt:FieldValue;
+}
+
+export interface IFavouriteData{
+    id:string;
+    userId:string;
+    createdAt:FieldValue;
+    car:CarProps;
 }
 
 export type ServiceProp ={
@@ -54,5 +71,10 @@ export type NotificationProps = {
     content:string,
     read:boolean,
     specialContent?:ReactNode,
-    time:Date,
+    time:FieldValue,
 }
+
+export type ResponseProps = {
+    message:string;
+    error:boolean;
+} | null

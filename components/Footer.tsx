@@ -1,5 +1,6 @@
 // import { useTheme } from '@/context/ThemeProvider'
 import { RoundButton } from '@/components/features/Texts'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -21,8 +22,10 @@ const Footer = () => {
 
       <div className="flex flex-col items-center md:items-start md:flex-row gap-5 md:gap-10">
         <div className="flex flex-col gap-5">
-          <span className='font-seaweed text-white' >LOGO</span>
-          <small className='text-slate-400 text-[0.7rem] w-[16rem]' >Diamond Fleet Rentals is an innovative solution to meet your car needs without any hassle. Easily rent a high-quality car through a simple and user-friendly app.</small>
+          <div className="flex relative w-24 h-20">
+            <Image src={'/logo.png'} alt='logo' fill />
+          </div>
+          <small className='text-slate-400 text-[0.7rem] w-[16rem]' >Lysander Auto Rentals is an innovative solution to meet your car needs without any hassle. Easily rent a high-quality car through a simple and user-friendly app.</small>
         </div>
 
         <div className="flex  grow gap-10 flex-row items-start justify-around">
@@ -57,7 +60,7 @@ const Footer = () => {
       <div className="flex flex-col gap-3 w-full">
         <hr className='border-slate-600' />
         <div className="flex flex-col-reverse items-center gap-8 md:flex-row md:justify-between">
-          <span className='text-slate-400 text-[0.7rem]' >Copyright &copy; {new Date().getFullYear()}. Diamond Fleet Rentals. All rights reserved</span>
+          <span className='text-slate-400 text-[0.7rem]' >Copyright &copy; {new Date().getFullYear()}. Lysander Auto Rentals. All rights reserved</span>
           <div className="flex flex-row items-center text-slate-400">
           <Link href='#'  className='text-slate-400 text-[0.7rem] hover:text-blue-700 hover:underline' >User Terms & Conditions</Link>
           |

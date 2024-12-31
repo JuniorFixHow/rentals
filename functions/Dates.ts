@@ -52,6 +52,25 @@ export function getTimeDifferenceInDays(date1: Date, date2: Date): number {
     return Math.ceil(differenceInDays); // Ceil the result
 }
 
+export function getTimeDifferenceInDaysV2(date1: Date, date2: Date): number {
+    const differenceInMilliseconds = Math.abs(date2.getTime() - date1.getTime());
+    const differenceInHours = differenceInMilliseconds / (1000 * 60 * 60); // Convert milliseconds to hours
+
+    // Calculate the number of days based on the difference in hours
+    const days = Math.floor(differenceInHours / 24); // Full days
+
+    // Calculate the remaining hours after full days
+    const remainingHours = differenceInHours % 24;
+
+    // Determine the return value based on the remaining hours
+    if (remainingHours <= 12) {
+        return days + 1; // Less than or equal to 12 hours
+    } else {
+        return days + 2; // Greater than 12 hours
+    }
+}
+
+
 export const formatTimeRemaining =(date:Date)=>{
     if(timeRemaining(date)?.includes('ending')){
         return 'Due now'

@@ -14,10 +14,6 @@ export type ToggleProps = {
   brand:string,
   model:string,
   colour:string[],
-  type:string[],
-  insurance:string[],
-  rented:boolean,
-  rentType:string,
   price:number[],
 }
 
@@ -26,15 +22,12 @@ const AllCars = ({
   brand,
   model,
   colour, 
-  type,
-  insurance,
-  rented, 
-  rentType, 
+ 
   price, 
 }:ToggleProps) => {
   const [range, setRange] = useState<number>(9)
   const cars = filterCars(CarsData, brand, model,
-    colour, type, insurance, rented, rentType, price
+    colour,  price
   )
   return (
     <div className='flex flex-col pb-36 md:pb-8 gap-4 w-full md:w-fit sm:grow px-4 ' >

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { formatDateTime } from '@/functions/Dates'
 import { MdDelete } from "react-icons/md";
 import { NotificationProps } from '@/types/Types'
+import { Timestamp } from 'firebase/firestore';
 
 type NotificationItemProps = {
   noti:NotificationProps,
@@ -39,7 +40,7 @@ const NotificationItem = ({className, handleClick, isOpen, noti, ...props}:Notif
           </>
         }
           <div className="flex justify-end items-center gap-4">
-            <small className='text-[0.7rem]' >{formatDateTime(noti.time)}</small>
+            <small className='text-[0.7rem]' >{formatDateTime((noti.time as Timestamp)?.toDate())}</small>
             <MdDelete className='text-red-700 dark:text-white cursor-pointer' />
           </div>
       </div>

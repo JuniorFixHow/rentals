@@ -4,24 +4,25 @@ import { SmallButtonText, Subtitle } from '@/components/features/Texts'
 import React, { useState } from 'react'
 import { IoFilterOutline } from 'react-icons/io5'
 import { ToggleProps } from '../car/AllCars'
-import { CarsData } from '@/data/Dummy'
 import { filterCars } from '@/functions/search'
+import { useFetchFavourites } from '@/hooks/useFavourites'
+import { getFavourites } from '@/functions/miscs'
+import NotAvailable from '@/components/features/NotAvailable'
 
 const AllFavourites = ({
   setToggleNav,
   brand,
   model,
-  colour, 
-  type,
-  insurance,
-  rented, 
-  rentType, 
+  colour,  
   price, 
 }:ToggleProps) => {
-    // console.log(CarsData.filter((item)=>item.favourites.includes('1')).length)
+
+    const {favourites} = useFetchFavourites();
+    const carData = getFavourites(favourites);
+    // console.log(carData)
     const [range, setRange] = useState<number>(9)
-    const cars = filterCars(CarsData, brand, model,
-      colour, type, insurance, rented, rentType, price
+    const cars = filterCars(carData, brand, model,
+      colour,  price
     )
   return (
     <div className='flex flex-col pb-36 md:pb-8 gap-4 w-full md:w-fit sm:grow px-4' >
@@ -34,14 +35,19 @@ const AllFavourites = ({
         </div>
         <SmallButtonText onClick={()=>setRange(cars.length)} text='View All' />
       </div>
+      {
+        cars?.length > 0 ?
+        <div className={`flex w-full flex-col gap-5 items-center sm:grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 sm:gap-4`}>
+          {
+            cars?.slice(0,range).map((car)=>(
+              <CarDisplay key={car.id} car={car} />
+            ))
+          }
+        </div>
+        :
+        <NotAvailable text='Nothing here at the moment. Try making some cars your favourites or reset your filters' />
+      }
 
-      <div className={`flex w-full flex-col gap-5 items-center sm:grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 sm:gap-4`}>
-        {
-          cars?.slice(0,range).filter((item)=>item.favourites.includes('1')).slice(0,9).map((car)=>(
-            <CarDisplay key={car.id} car={car} />
-          ))
-        }
-      </div>
     </div>
   )
 }
