@@ -41,17 +41,17 @@ const Footer = () => {
 
           <div className="flex flex-col gap-3">
             <small className='text-slate-400 text-[0.7rem]' >Company</small>
-            <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='/updates' >Updates</Link>
-            <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='/help' >Help</Link> 
+            <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='/notifications' >Updates</Link>
+            <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='mailto:lysanderautorentals@gmail.com' >Help</Link> 
           </div>
 
           <div className="flex flex-col gap-3">
             <small className='text-slate-400 text-[0.7rem]' >Socials</small>
-            <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='https://x.com' >X</Link>
+            {/* <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='https://x.com' >X</Link>
             <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='https://linkedin.com' target='_blank' >LinkedIn</Link> 
-            <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='https://facebook.com' target='_blank' >Facebook</Link> 
-            <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='https://instagram.com' target='_blank' >Instagram</Link> 
-            <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='https://tiktok.com' target='_blank' >TikTok</Link> 
+            <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='https://facebook.com' target='_blank' >Facebook</Link>  */}
+            <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='https://instagram.com/lysanderautorentals' target='_blank' >Instagram</Link> 
+            <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='https://tiktok.com/@lysanderautorentals' target='_blank' >TikTok</Link> 
           </div>
 
         </div>
@@ -62,7 +62,7 @@ const Footer = () => {
         <div className="flex flex-col-reverse items-center gap-8 md:flex-row md:justify-between">
           <span className='text-slate-400 text-[0.7rem]' >Copyright &copy; {new Date().getFullYear()}. Lysander Auto Rentals. All rights reserved</span>
           <div className="flex flex-row items-center text-slate-400">
-          <Link href='#'  className='text-slate-400 text-[0.7rem] hover:text-blue-700 hover:underline' >User Terms & Conditions</Link>
+          <Link href='/docs/LYSANDER AUTO RENTALS TnC.docx' download='/docs/LYSANDER AUTO RENTALS TnC.docx'  className='text-slate-400 text-[0.7rem] hover:text-blue-700 hover:underline' >User Terms & Conditions</Link>
           |
           <Link href='#'  className='text-slate-400 text-[0.7rem] hover:text-blue-700 hover:underline' >Privacy Policy</Link>
           </div>

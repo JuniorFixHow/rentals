@@ -45,7 +45,7 @@ export const NavbarHelps:NavbarProps[] = [
     },
     {
         id:7,
-        icon:<Link href='mailto:diamondtoursgh@gmail.com' target='_blank' ><IoMdHelpCircleOutline/></Link>,
+        icon:<Link href='mailto:lysanderautorentals@gmail.com' target='_blank' ><IoMdHelpCircleOutline/></Link>,
     },
     {
         id:8,
