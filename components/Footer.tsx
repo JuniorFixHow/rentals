@@ -37,12 +37,25 @@ const Footer = () => {
             <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='/favourites' >Favourites</Link>
             <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='/bookings' >Bookings</Link>
             <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='/orders' >Orders</Link>
+            <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='/notifications' >Updates</Link>
           </div>
 
           <div className="flex flex-col gap-3">
             <small className='text-slate-400 text-[0.7rem]' >Company</small>
-            <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='/notifications' >Updates</Link>
-            <Link className='text-white hover:text-blue-700 hover:underline text-[0.8rem]' href='mailto:lysanderautorentals@gmail.com' >Help</Link> 
+            <address className="flex flex-col gap-2">
+              <div className="flex flex-col gap-1 md:flex-row md:gap-3 items-start">
+                <span className="text-sm text-white">Address:</span>
+                <span className="text-[0.8rem] text-white">Ejisu, Last Floor, Nasona Filling Station</span>
+              </div>
+              <div className="flex flex-col gap-1 md:flex-row md:gap-3 items-start">
+                <span className="text-sm text-white">Email:</span>
+                <Link className='text-blue-700 hover:underline text-[0.8rem]' href='mailto:lysanderautorentals@gmail.com' >lysanderautorentals@gmail.com</Link> 
+              </div>
+              <div className="flex flex-col gap-1 md:flex-row md:gap-3 items-start">
+                <span className="text-sm text-white">Phone:</span>
+                <Link className='text-blue-700 hover:underline text-[0.8rem]' href='tel:+233534775141' >+233534775141</Link> 
+              </div>
+            </address>
           </div>
 
           <div className="flex flex-col gap-3">
