@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { IoIosHeartEmpty, IoMdHeart } from "react-icons/io";
 import { useFetchFavourites } from "@/hooks/useFavourites";
-import { getFavourite, getRent } from "@/functions/miscs";
+import { getCurrency, getFavourite, getRent } from "@/functions/miscs";
 import { useFetchRents } from "@/hooks/useFetchRents";
 import { useUser } from "@clerk/nextjs";
 import { addDoc, collection, deleteDoc, doc, serverTimestamp } from "firebase/firestore";
@@ -53,7 +53,7 @@ const CarDetails = ({car}:{car:CarProps}) => {
 
         <div className="flex flex-row items-center justify-between">
            <Back/>
-           <span>GHC{car?.price}/<small className="text-[0.7rem]" >day</small> </span>
+           <span>{getCurrency(car)}{car?.price}/<small className="text-[0.7rem]" >day</small> </span>
         </div>
 
         <div className="flex gap-6 dark:border items-center flex-col p-4 shadow-md rounded-3xl">

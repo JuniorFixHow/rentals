@@ -113,7 +113,7 @@ const FilterCars = ({
             </div>
 
             <div className="flex flex-col gap-2">
-                <Small text='Prie range per hour' />
+                <Small text='Prie range per day' />
                 <Slider
                     getAriaLabel={() => 'Minimum distance'}
                     value={price}

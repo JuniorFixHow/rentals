@@ -23,6 +23,7 @@ export interface CarProps {
     brand:string;
     model:string;
     price:number;
+    isDollar?:boolean;
     new:boolean;
     year:string;
 }

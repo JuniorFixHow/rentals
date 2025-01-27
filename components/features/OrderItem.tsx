@@ -9,7 +9,7 @@ import { CarsData } from '@/data/Dummy'
 import { deleteDoc, doc, Timestamp } from 'firebase/firestore'
 import { db } from '@/lib/database/firebase'
 import { useFetchRents } from '@/hooks/useFetchRents'
-import { getRent } from '@/functions/miscs'
+import { getCurrency, getRent } from '@/functions/miscs'
 import { IRent } from '@/types/Types'
 
 const OrderItem = ({order, className, ...props}:{order:IRent} & ComponentProps<'div'>) => {
@@ -47,13 +47,13 @@ const OrderItem = ({order, className, ...props}:{order:IRent} & ComponentProps<'
                     <small className='text-slate-400' >{car?.name}</small>
                     <span>{car?.brand} {car?.model}</span>
                 </div>
-                <span>GHC{car?.price}</span>
+                <span>{getCurrency(car)}{car?.price}</span>
             </div>
 
             
             <div className="flex flex-row items-center justify-between py-1 border-b">
                 <small>Amount</small>
-                <small className='font-bold' >GHC{order?.price} (Pending)</small>
+                <small className='font-bold' >{getCurrency(car)}{order?.price} (Pending)</small>
             </div>
             
             <div className="flex flex-row items-center justify-between py-1 border-b">

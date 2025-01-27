@@ -47,6 +47,58 @@ export const InsuranceData:string[]=[
 
 
 export const CarsData:CarProps[] = [
+
+    {
+        id: "0013",
+        photos: [
+            '/cars/rangeroversports20201/1.jpg',
+            '/cars/rangeroversports20201/2.jpg',
+            '/cars/rangeroversports20201/3.jpg',
+            '/cars/rangeroversports20201/4.jpg',
+        ],
+        name: "Range Rover Sports",
+        colour: "Black",
+        brand: "Range Rover",
+        model: "Sports",
+        price: 500,
+        isDollar:true,
+        new:true,
+        year:'2020'
+    },
+    {
+        id: "0014",
+        photos: [
+            '/cars/rangeroversports20202/1.jpg',
+            '/cars/rangeroversports20202/2.jpg',
+            '/cars/rangeroversports20202/3.jpg',
+            '/cars/rangeroversports20202/4.jpg',
+        ],
+        name: "Range Rover Sports",
+        colour: "Black",
+        brand: "Range Rover",
+        model: "Sports",
+        price: 650,
+        isDollar:true,
+        new:true,
+        year:'2020'
+    },
+    {
+        id: "0015",
+        photos: [
+            '/cars/rangeroversports20203/1.jpg',
+            '/cars/rangeroversports20203/2.jpg',
+        ],
+        name: "Range Rover Sports",
+        colour: "Silva",
+        brand: "Range Rover",
+        model: "Sports",
+        price: 650,
+        isDollar:true,
+        new:true,
+        year:'2020'
+    },
+  
+
     {
         id: "0001",
         photos: [
@@ -272,53 +324,7 @@ export const CarsData:CarProps[] = [
         new:false,
         year:'2013'
     },
-    {
-        id: "0013",
-        photos: [
-            '/cars/rangeroversports20201/1.jpg',
-            '/cars/rangeroversports20201/2.jpg',
-            '/cars/rangeroversports20201/3.jpg',
-            '/cars/rangeroversports20201/4.jpg',
-        ],
-        name: "Range Rover Sports",
-        colour: "Black",
-        brand: "Range Rover",
-        model: "Sports",
-        price: 500,
-        new:true,
-        year:'2020'
-    },
-    {
-        id: "0014",
-        photos: [
-            '/cars/rangeroversports20202/1.jpg',
-            '/cars/rangeroversports20202/2.jpg',
-            '/cars/rangeroversports20202/3.jpg',
-            '/cars/rangeroversports20202/4.jpg',
-        ],
-        name: "Range Rover Sports",
-        colour: "Black",
-        brand: "Range Rover",
-        model: "Sports",
-        price: 650,
-        new:true,
-        year:'2020'
-    },
-    {
-        id: "0015",
-        photos: [
-            '/cars/rangeroversports20203/1.jpg',
-            '/cars/rangeroversports20203/2.jpg',
-        ],
-        name: "Range Rover Sports",
-        colour: "Silva",
-        brand: "Range Rover",
-        model: "Sports",
-        price: 650,
-        new:true,
-        year:'2020'
-    },
-  
+
 ];
 
 export const ServiceData:ServiceProp[]=[

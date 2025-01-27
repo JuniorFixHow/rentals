@@ -7,7 +7,7 @@ import { CarProps, IFavourite } from '@/types/Types'
 import { ComponentProps } from 'react'
 import { useFetchFavourites } from '@/hooks/useFavourites'
 import { useFetchRents } from '@/hooks/useFetchRents'
-import { getFavourite, getRent } from '@/functions/miscs'
+import { getCurrency, getFavourite, getRent } from '@/functions/miscs'
 import { addDoc, collection, deleteDoc, doc, serverTimestamp } from 'firebase/firestore'
 import { db } from '@/lib/database/firebase'
 import { useUser } from '@clerk/nextjs'
@@ -83,7 +83,7 @@ const CarDisplay = ({car, ...props}:{car:CarProps} & ComponentProps<'div'>) => {
                 <span className='text-[#9498A5] text-[0.75rem]' >{car.name} | {car.model}</span>
                 <div className="flex flex-row justify-between">
                 <span className='text-[0.8rem]' >{car.brand}, {car.year}</span>
-                <span className='text-[0.8rem]' >GHC{car?.price}/<small className='text-[0.65rem]' >day</small> </span>
+                <span className='text-[0.8rem]' >{getCurrency(car)}{car?.price}/<small className='text-[0.65rem]' >day</small> </span>
                 </div>
             </div>
 

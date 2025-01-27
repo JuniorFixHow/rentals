@@ -11,7 +11,7 @@ import { addDoc, collection, deleteDoc, doc, serverTimestamp, Timestamp } from '
 import { db } from '@/lib/database/firebase'
 import { Alert } from '@mui/material'
 import { useFetchRents, useFetchUserRents } from '@/hooks/useFetchRents'
-import {  getRent } from '@/functions/miscs'
+import {  getCurrency, getRent } from '@/functions/miscs'
 import { useFetchOrders } from '@/hooks/useOrders'
 
 const CarPayment = ({car}:{car:CarProps}) => {
@@ -140,15 +140,15 @@ const CarPayment = ({car}:{car:CarProps}) => {
             </div>
             <div className="flex flex-row items-center border-slate-600 justify-between border-b py-1">
                 <small className='text-slate-500' >Price</small>
-                <small className="font-bold" >GHC{totalAmount.toFixed(2)}</small>
+                <small className="font-bold" >{getCurrency(car)}{totalAmount.toFixed(2)}</small>
             </div>
             <div className="flex flex-row items-center border-slate-600 justify-between border-b py-1">
                 <small className='text-slate-500' >Taxes</small>
-                <small className="font-bold" >GHC0</small>
+                <small className="font-bold" >{getCurrency(car)}0</small>
             </div>
             <div className="flex flex-row items-center border-slate-600 justify-between border-b py-1">
                 <small className='text-slate-500' >Dicounts</small>
-                <small className="font-bold" >GHC0</small>
+                <small className="font-bold" >{getCurrency(car)}0</small>
             </div>
         </div>
 
@@ -158,7 +158,7 @@ const CarPayment = ({car}:{car:CarProps}) => {
         }
 
         <div className="flex flex-row items-center justify-between">
-            <span>Total price: GHC{totalAmount === 0 ? 0:(totalAmount).toFixed(2)}</span>
+            <span>Total price: {getCurrency(car)}{totalAmount === 0 ? 0:(totalAmount).toFixed(2)}</span>
             {
                 !isSignedIn ?
                     <Link href='/sign-in' >

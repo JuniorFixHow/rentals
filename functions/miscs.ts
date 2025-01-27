@@ -63,3 +63,9 @@ export const getCarColours = (): string[] => {
     const uniqueColours = [...new Set<string>(items)];
     return uniqueColours;
 };
+
+
+
+export const getCurrency =(car:CarProps):string=>{
+    return car?.isDollar ? '$' : 'GHC'
+}
